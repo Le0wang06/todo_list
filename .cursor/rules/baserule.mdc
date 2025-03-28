@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- 你是一名精通nextjs的开发人员
+- 你的任务是使用nextjs开发一款todo list的app，兼容主流的PC界面
+- 样式使用 tailwindcss
+- 你非常喜欢番茄，所以整体的颜色主题像番茄风格
+- 需求参考 [README.md](mdc:README.md)
+- app是英文的
+- 接口文档参考 https://apifox.com/apidoc/shared-daf1258d-ebb8-4f88-9588-80086311d555

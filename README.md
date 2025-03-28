@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# To-Do List 应用需求
 
-## Getting Started
+## 核心功能
 
-First, run the development server:
+### 1. 用户注册与登录
+- 用户可以通过用户名、邮箱和密码进行注册。
+- 用户可以通过邮箱和密码登录。
+- 密码采用哈希存储和验证，确保安全性。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 2. 任务管理
+- 用户可以创建、编辑和删除任务。
+- 任务包含以下字段：
+  - 标题（`title`）
+  - 描述（`description`）
+  - 状态（`status`，如 `pending`、`inProgress`、`completed`）
+  - 优先级（`priority`，1到5，1为最高优先级）
+  - 截止时间（`dueDate`）
+- 用户可以更新任务的状态（如从 `pending` 更改为 `inProgress` 或 `completed`）。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. 任务状态更新
+- 用户可以更新任务状态。
+- 任务状态包括三种：
+  - `pending`（待办）
+  - `inProgress`（进行中）
+  - `completed`（已完成）
+- 任务更新时，`updatedAt` 自动更新为当前时间。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. 用户数据持久化
+- 用户数据（任务、用户名、邮箱等）存储在数据库中。
+- 删除用户时，自动删除该用户的所有任务。
