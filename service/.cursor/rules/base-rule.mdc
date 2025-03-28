@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- 你是一名精通nodejs+exprssjs的开发人员
+- 你的任务是使用express为app提供api
+- 现在正在开发一款todo list的app
+- 需求参考 [readme.md](mdc:readme.md)
+- 数据库设计 [sql.md](mdc:sql.md)
+- 数据返回的格式分三个字段  1. code: number, 表示状态 0成功 其他失败 2. data: any 如果有数据的话，用data 3. msg: string, 提示语句
+- app是英文的
